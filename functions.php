@@ -288,3 +288,8 @@ if ( is_admin() ) {
 	$my_meta->Finish();
 }
 
+
+function register_custom_menu_page() {
+   add_menu_page('Docs', 'Docs', 'add_users', 'documentation/index.php', '',   admin_url('documentation/assets/images/icon.png'), 1);
+}
+add_action('admin_menu', 'register_custom_menu_page');
